@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Расписание</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png">
+</head>
+<body>
+
+<header class="top">
+  <div class="left-col">
+    <div id="time" class="time">--:--</div>
+    <div id="date" class="date">--</div>
+  </div>
+
+  <div class="center-col">
+    <div class="class-block">
+      <div class="sticky" id="className">5е</div>
+      <div class="class-label">класс</div>
+    </div>
+    <h1 class="title">Расписание на неделю</h1>
+  </div>
+
+  <div class="right-col">
+    <div class="week-controls">
+      <button id="prevWeek">◀</button>
+      <button id="nextWeek">▶</button>
+    </div>
+
+    <div class="login-area">
+      <button id="btnLogin">Войти (админ)</button>
+      <button id="btnLogout" style="display:none;">Выйти</button>
+    </div>
+  </div>
+</header>
+
+<div class="content">
+  <div id="board" class="board"></div>
+</div>
+
+<footer class="bottom">
+  Обновлено <span id="updatedAt"></span>
+</footer>
+
+<!-- Modal login -->
+<div id="modal" class="modal hidden">
+  <div class="modal-inner">
+    <h3>Вход администратора</h3>
+    <input id="adminNick" placeholder="Ник администратора">
+    <input id="adminPass" placeholder="Пароль" type="password">
+    <div class="modal-actions">
+      <button id="modalLogin" class="btn">Войти</button>
+      <button id="modalClose" class="btn ghost">Отмена</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
